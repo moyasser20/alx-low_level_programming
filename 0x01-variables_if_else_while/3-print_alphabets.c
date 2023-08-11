@@ -22,9 +22,9 @@ int main(void)
 	while (CH <= 'Z')
 	{
 		putchar(CH);
-		CH++
+		CH++;
 	}
-	putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
