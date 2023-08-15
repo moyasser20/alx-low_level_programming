@@ -20,6 +20,7 @@ for (n2 = 0 ; n2 <= 9 ; n2++)
 {
 _putchar(',');
 _putchar(' ');
+prod = n1 * n2;
 /**
 * put space if product is a single number
 * place the first digit if its two numbers
