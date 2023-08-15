@@ -15,7 +15,7 @@ int n1, n2, prod;
 
 for (n1 = 0 ; n2 <= 9 ; n2++)
 {
-_putchar(48)
+_putchar(48);
 for (n2 = 0 ; n2 <= 9 ; n2++)
 {
 _putchar(',');
