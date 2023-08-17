@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _isdigit - checks if its is digit or not
+ * _isdigit - checks if inout between 0-9
  *
  * @c: input
  *
- * Return: 1 if c is a digit,0 otherwise
+ * Return: 1 if digit,0 otherwise
  *
 */
 
