@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print 0-9 apart
- * from 2 and 4 only using _putchar twice
+ * print_most_numbers - print 0 - 9 apart from 2 and 4
+ * using _putchar twice
  *
- * Return: ALways 0 (success)
- */
+ * Return : always 0 (Success)
+*/
 
 void print_most_numbers(void)
 {
