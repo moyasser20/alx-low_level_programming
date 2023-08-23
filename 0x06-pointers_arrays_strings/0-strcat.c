@@ -3,7 +3,7 @@
 /**
 * _strcat - Function that concatenates two string
 *
-* @dest: Pointer to destination input
+* @dest: Pointer to destination qinput
 * @src : Pointer to source input
 *
 * Return: Returns pointer to resulting string @dest
