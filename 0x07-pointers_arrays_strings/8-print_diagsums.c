@@ -4,7 +4,7 @@
 * print_diagsums - function to sum 3D array
 *
 * @a: pointer to choose the constant of array
-* @size: size of the array
+* @size: size of the array [square]
 */
 
 void print_diagsums(int *a, int size)
@@ -14,7 +14,7 @@ int i, s1 = 0, s2 = 0;
 for (i = 0; i < size; i++)
 {
 s1 += a[i];
-s2 += (size - a[i] - 1);
+s2 += (size - i - 1);
 a += size;
 }
 printf("%d, ", s1);
