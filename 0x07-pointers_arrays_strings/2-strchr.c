@@ -6,19 +6,19 @@
 * @s: pointer to put the constant
 * @c: constant
 *
-* Return: Pointer s or null
+* Return: Pointerto s or null
 */
 
 char *_strchr(char *s, char c)
 {
-int n;
+	int n;
 
-for (n = 0; s[n] >= '\0'; n++)
-{
-if (s[n] == c)
-{
-return (s + n);
-}
-}
-return ('\0')
+	for (n = 0; s[n] >= '\0' ; n++)
+	{
+		if (s[n] == c)
+		{
+			return (s + itr);
+		}
+	}
+	return ('\0');
 }
