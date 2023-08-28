@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
-* _memscpy - copies memory size
-*
-* @dest: pointer to choose the constant to copy
-* @src: constanthat copy to
-* @n: number of max bytes
-*
-* Return: Pointer dest
+ * _memcpy - bbe
+ * @dest: ff
+ * @src: gg
+ * @n: gg
+ * Return: Always 0
 */
 
-char *_memscpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-unsigned int a;
+char *dest_ptr = dest;
+char *src_ptr = src;
 
-for (a = 0; a < n; a++)
+while (n--)
 {
-dest[a] = src[a];
+*dest_ptr++ = *src_ptr++;
 }
-
 return (dest);
 }
