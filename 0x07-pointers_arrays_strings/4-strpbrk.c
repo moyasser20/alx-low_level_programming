@@ -1,33 +1,26 @@
 #include "main.h"
 
 /**
-* _strpbrk - fills memory with a constant type
-*
-* @s: pointer to choose the constant to copy
-* @accept: constan that copy to
-*
-* Return: Pointer number of bytes
-*/
-
-char  *_strpbrk(char *s, char *accept)
+ * _strpbrk - Locates the first occurrence of any byte in a string
+ *            that matches any byte in a second given string.
+ * @s: The string to be searched.
+ * @accept: The string containing bytes to be matched.
+ *
+ * Return: A pointer to the byte in `s` that matches one of the bytes
+ *         in `accept`, or NULL if no such byte is found.
+ */
+char *_strpbrk(char *s, char *accept)
 {
-int itr;
-int n;
-char *p
+	int i, j;
 
-while (s[itr] != '\0')
-{
-n = 0;
-while (accept[n] != '\0')
-{
-if (accept[n] == s[itr])
-{
-p = $s[itr];
-return (p);
-}
-}
-}
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+				return (&s[i]);
+		}
+	}
 
-return (0);
-
+	return (NULL);
 }
