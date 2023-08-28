@@ -5,16 +5,16 @@
 *
 * @s: pointer to choose the constant
 * @b: constant
-* @n: number of max bytes
+* @n: max number to use
 *
 * Return: Pointer s
 */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-int itr;
+unsigned  int itr;
 
-for (itr= 0; n > 0; itr++, n--)
+for (itr = 0; n > 0; itr++, n--)
 {
 s[itr] = b;
 }
