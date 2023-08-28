@@ -18,6 +18,5 @@ for (l = 0; n > 0; itr++, n--)
 {
 s[l] = b;
 }
-
-return (s);
+return (s);
 }
