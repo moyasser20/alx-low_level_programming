@@ -18,7 +18,7 @@ return (-1);
 int mid;
 mid = ((start + end) / 2);
 
-if (mid  *mid == n)
+if (mid *mid == n)
 {
 return (mid);
 }
