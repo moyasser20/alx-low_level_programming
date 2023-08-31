@@ -1,22 +1,32 @@
 #include "main.h"
 
 /**
- * is_prime_number - bbe
- * @n:ff
- * @othern : gg
- * Return: Always 0
-*/
+ * checkprime - Checks if a number is prime.
+ * @n: The number to check.
+ * @othern: The current divisor to check.
+ *
+ * Return: 1 if the number is prime, 0 otherwise.
+ */
 int checkprime(int n, int othern);
+
+/**
+ * is_prime_number - Checks if a number is prime.
+ * @n: The number to check.
+ *
+ * Return: 1 if the number is prime, 0 otherwise.
+ */
 int is_prime_number(int n)
 {
 return (checkprime(n, 2));
 }
+
 /**
- * checkprime - bbe
- * @n: ff
- * @othern: yo
- * Return: Always 0
-*/
+ * checkprime - Recursive helper function to check primality.
+ * @n: The number to check.
+ * @othern: The current divisor to check.
+ *
+ * Return: 1 if the number is prime, 0 otherwise.
+ */
 int checkprime(int n, int othern)
 {
 if (othern >= n && n > 1)
