@@ -1,6 +1,5 @@
-#ifndef MAIN.H
-#define MAIN.H
-
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -15,4 +14,4 @@ char *argstostr(int ac, char **av);
 char **strtow(char *str);
 
 
-#endif /*MAIN.H */
+#endif /* MAIN_H */
