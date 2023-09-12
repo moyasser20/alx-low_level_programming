@@ -2,26 +2,23 @@
 #include <stdlib.h>
 
 /**
- * free_dog - fres yo
- *
- *@d: yo do
+ * free_dog - Frees memory allocated for a dog structure
+ * @d: Pointer to the dog structure
  *
  * Return: void
-*/
-void free_dog(dog_t *d)
+ */
+void free_dog(struct dog *d)
 {
-	if (d)
-	{
-		if (d->name)
-		{
-			{
+if (d)
+{
+if (d->name)
+{
 free(d->name);
-			}
-		}
-		if (d->owner)
-		{
-			free(d->owner)'
-		}
-	}
 }
-
+if (d->owner)
+{
+free(d->owner);
+}
+free(d);
+}
+}
