@@ -1,78 +1,72 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+
 /**
- * format_char - bbe
- * @separator: ff
- * @ap: gg
- * Return: Always 0
+ * print_char - prints a char
+ * @separator: the separator to print
+ * @ap: the argument pointer
  */
-void format_char(char *separator, va_list ap)
+void print_char(char *separator, va_list ap)
 {
 printf("%s%c", separator, va_arg(ap, int));
 }
 
 /**
- * format_int - bbe
- * @separator: ff
- * @ap: gg
- * Return: Always 0
+ * print_int - prints an int
+ * @separator: the separator to print
+ * @ap: the argument pointer
  */
-void format_int(char *separator, va_list ap)
+void print_int(char *separator, va_list ap)
 {
 printf("%s%d", separator, va_arg(ap, int));
 }
 
 /**
- * format_float - bbe
- * @separator: ff
- * @ap: gg
- * Return: Always 0
+ * print_float - prints a float
+ * @separator: the separator to print
+ * @ap: the argument pointer
  */
-void format_float(char *separator, va_list ap)
+void print_float(char *separator, va_list ap)
 {
 printf("%s%f", separator, va_arg(ap, double));
 }
 
 /**
- * format_string - bbe
- * @separator: ff
- * @ap: gg
- * Return: Always 0
+ * print_string - prints a string
+ * @separator: the separator to print
+ * @ap: the argument pointer
  */
-void format_string(char *separator, va_list ap)
+void print_string(char *separator, va_list ap)
 {
-char *str = va_arg(ap, char*);
+char *str = va_arg(ap, char *);
 
-switch ((int)(!str))
-{
-case 1:
+if (str == NULL)
 str = "(nil)";
-default:
 printf("%s%s", separator, str);
-}
 }
 
 /**
- * print_all - bbe
- * @format: ff
- * @...: gg
- * Return: Always 0
+ * print_all - prints anything
+ * @format: the list of types of arguments passed to the function
+ * @...: the arguments to print
  */
 void print_all(const char * const format, ...)
 {
-int i = 0, j;
-char *separator = "";
 va_list ap;
+int i = 0;
+int j;
+char *separator = "";
 token_t tokens[] = {
-{"c", format_char},
-{"i", format_int},
-{"f", format_float},
-{"s", format_string},
+{"c", print_char},
+{"i", print_int},
+{"f", print_float},
+{"s", print_string},
 {NULL, NULL}
 };
 
 va_start(ap, format);
+
 while (format && format[i])
 {
 j = 0;
@@ -82,11 +76,14 @@ if (format[i] == tokens[j].token[0])
 {
 tokens[j].f(separator, ap);
 separator = ", ";
+break;
 }
 j++;
 }
 i++;
 }
+
 printf("\n");
+
 va_end(ap);
 }
