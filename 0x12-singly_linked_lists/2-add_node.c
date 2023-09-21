@@ -1,30 +1,30 @@
 #include "lists.h"
 
 /**
-*add_node - ff
-* @head:ss
-* @str: add
-* Return: lol
+ * add_node - lol
+ * @head: lol
+ * @str: lol
+ * Return: always 0
 */
-ist_t *add_node(list_t **head, const char *str)
-{
-list_t *newhead = malloc(sizeof(size_t));
 
-if (!head || !newhead)
+
+list_t *add_node(list_t **head, const char *str)
 {
+list_t *new_node = malloc(sizeof(list_t));
+if (!head || !new_node)
 return (NULL);
-}
 if (str)
 {
-newhead->str = sttdup(str);
-if (!newhead->str)
+new_node->str = strdup(str);
+if (!new_node->str)
 {
-free(newhead);
+free(new_node);
 return (NULL);
 }
-newhead->len = _strlen(newhead->str);
+new_node->len = _strlen(new_node->str);
 }
-newhead->next = *head;
-*head = newhead;
-return (newhead);
+
+new_node->next = *head;
+*head = new_node;
+return (new_node);
 }
