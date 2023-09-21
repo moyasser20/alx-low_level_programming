@@ -43,5 +43,3 @@ temp = temp->next;
 }
 temp->next = newhead;
 }
-return (newhead);
-}
